@@ -9,7 +9,7 @@ function tri(numbers, order){
             numbers[a] = numbers[a+1];
             numbers[a+1] = easy;
             console.log(numbers[a]);
-            tri(numbers, order);
+            tri(numbers , order);
         }
     }
     if(order=="desc"){
