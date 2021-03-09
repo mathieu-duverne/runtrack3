@@ -1,4 +1,3 @@
-let body = document.querySelector('#body');
 let scroll = document.querySelector('#scroll');
 document.addEventListener("scroll", function scroller(length){
         let percent = (window.scrollY / 3495) * 100;
