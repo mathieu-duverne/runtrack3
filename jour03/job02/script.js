@@ -6,13 +6,12 @@ $("#button").click(function () {
         parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
     }
 });
-
-
 $('img').click(function(event){
     cloud += event.target.id;
     // console.log(cloud);
     $("#rangee").append(this);
-    console.log(cloud.length);
+    console.log(this)
+    // console.log(cloud.length);
     // console.log(cloud);
     if(cloud.length==6)
     {
