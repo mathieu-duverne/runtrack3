@@ -8,35 +8,35 @@
 </head>
 <body style=" display:flex;  justify-content: center;">
 <section id="dedan" >
-<div id="shuffle" style="border: solid 2px; place-items:center; height:650px; width:650px; display:grid; grid-template-columns:repeat(3,auto); justify-content:center; grid-gap:5px;">
+<section id="shuffle" style="border: solid 2px; place-items:center; height:650px; width:650px; display:grid; grid-template-columns:repeat(3,auto); justify-content:center; grid-gap:5px;">
 <div id="1">
-<img width="200" src="images/1.png" alt="">
+<img id="1" width="200" src="images/1.png" alt="">
 </div>
 <div id="2">
-<img width="200" src="images/2.png" alt="">
+<img id="2" width="200" src="images/2.png" alt="">
 </div>
 <div id="3">
-<img width="200" src="images/3.png" alt="">
+<img id="3" width="200" src="images/3.png" alt="">
 </div>
 <div id="4">
-<img width="200" src="images/4.png" alt="">
+<img id="4" width="200" src="images/4.png" alt="">
 </div>
 <div id="5">
-<img width="200" src="images/5.png" alt="">
+<img id="5" width="200" src="images/5.png" alt="">
 </div>
 <div id="6">
-<img width="200" src="images/6.png" alt="">
+<img id="6" width="200" src="images/6.png" alt="">
 </div>
 <div id="7">
-<img width="200" src="images/7.png" alt="">
+<img id="7" width="200" src="images/7.png" alt="">
 </div>
 <div id="8">
-<img width="200" src="images/8.png" alt="">
+<img id="8" width="200" src="images/8.png" alt="">
 </div>
 <div id="9">
-
+<img id="9" width="200" src="" alt="">
 </div>
-</div>
+</section>
 </section>
 <button id="button">Shuffle</button>
 <script

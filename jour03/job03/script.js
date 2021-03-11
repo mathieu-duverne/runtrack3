@@ -7,26 +7,7 @@ $("#button").click(function () {
         parent.append(divs.splice(Math.floor(Math.random() * divs.length), 1)[0]);
         //  console.log(divs);
     }
-       for(let i =0;i < 9;i++){
-        //    console.log(divs);
-        if( parent.children()[i].id==9){
-            if(i==0){
-                console.log("pipi")
-                console.log(parent.children()[1].id)
-                $('#'+parent.children()[1].id).click(function(event){
-                    let temp = parent.children()[0];
-                    console.log(parent.children()[1]);
-                    $("#shuffle").append(parent.children()[1])
-                })
-                parent.children()[3].click(function(){
-                    console.log(' pipi')
-                })
-            }
-
-
-
-         }
-   }
+      
     // for(let i=0; i<divs.length;i++){
     //     console.log[divs[i]]
     // }
@@ -38,5 +19,34 @@ $("#button").click(function () {
     // console.log(parent.children()[6]);
     // console.log(parent.children()[7]);
     // console.log(parent.children()[8]);
+    var parent = $("div");
 
+for(let i =0;i < 9;i++){
+    // console.log(parent.children()[1])
+    if( parent.children()[i].id==9){
+        // console.log(i)
+        // console.log(parent[0]);
+        console.log(parent.children()[0])
+// PAS REUSSI A FAIRE PRENDRE LA PALCE DE LA DIV EMPTY APPEND REALISEE MAIS FAUT IL FAIRE FONCTION COMME PARAMTRE LA POSITION DU BLANC DE IMAGE VIDE
+        if(i==0){
+            
+            $('#'+parent.children()[1].id).click(function(event){
+                let temp = parent.children()[0];
+                parent[0].append(parent.children()[1])
+                parent[1].append(temp);
+                console.log(i)
+            })
+            $('#'+parent.children()[3].id).click(function(event){
+                let temp = parent.children()[0];
+                parent[0].append(parent.children()[3])
+                parent[3].append(temp);
+                
+            })
+        }
+
+
+
+     }
+
+    }
 })
