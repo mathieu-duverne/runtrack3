@@ -38,14 +38,13 @@ $('#recuperation').click( function (event){
         $("#error_password").append(error['password']);
     }
     else {
-console.log('test');
-    $.ajax({
-            url: 'inscription.php',
+       request = $.ajax({
+            url: 'Controleur_inscription.php',
             type: 'POST',
             data:{nom:nom,prenom:prenom,email:email,password:password,password_hash:password_hash},
             dataType: 'text',
         })
-            .done(function(data){
+            request.done(function(data){
                 console.log(data);
             })
     }

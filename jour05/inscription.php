@@ -1,37 +1,18 @@
 <?php
-echo 'test';
-//try
-//{
-//    $conn = new PDO("mysql:host=localhost;dbname=utilisateurs", "root", "");
-//// set the PDO error mode to exception
-//    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-//    echo "Connected successfully"."<br>";
-//}
-//catch
-//(PDOException $e) {
-//    echo "Connection failed: " . $e->getMessage();
-//}
-//var_dump($_POST);
-//if(isset($_POST['inscription']))
-//{
-//    if(empty($_POST['nom']) || empty($_POST['prenom']) || empty($_POST['email']) || empty($_POST['password']) || empty($_POST['password_hash']))
-//    {
-//        echo "CHAMPS VIDE ! IN PHP";
-//    }
-//    else {
-//        if ($_POST['password'] == $_POST['password_hash']) {
-//            $sql = "INSERT INTO utilisateurs SET nom = :nom, prenom = :prenom, email = :email, password = :password";
-//            $stmt = $conn->prepare($sql);
-//            $stmt->execute([
-//                "nom" => $_POST['nom'],
-//                "prenom" => $_POST['prenom'],
-//                "email" => $_POST['email'],
-//                "password" => $_POST['password']
-//            ]);
-//        }
-//    }
-//}
-//?>
+try
+{
+    $conn = new PDO("mysql:host=localhost;dbname=utilisateurs", "root", "");
+// set the PDO error mode to exception
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo "Connected successfully"."<br>";
+}
+catch
+(PDOException $e) {
+    echo "Connection failed: " . $e->getMessage();
+}
+require_once 'Controleur_inscription.php';
+
+?>
 <!doctype html>
 <html lang="fr">
 <head>
@@ -42,7 +23,7 @@ echo 'test';
     <title>Inscription</title>
 </head>
 <body>
-<form action="inscription.php" method="post">
+<form action="inscription.php" method="post" enctype="multipart/form-data">
     Nom
     <input id="nom" name="nom" type="text"><br>
     <div id="error_nom">
@@ -76,5 +57,4 @@ echo 'test';
 </html>
 <?php
 var_dump($_POST);
-?>
 
