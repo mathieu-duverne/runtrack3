@@ -1,18 +1,3 @@
-<?php
-try
-{
-    $conn = new PDO("mysql:host=localhost;dbname=utilisateurs", "root", "");
-// set the PDO error mode to exception
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "Connected successfully"."<br>";
-}
-catch
-(PDOException $e) {
-    echo "Connection failed: " . $e->getMessage();
-}
-require_once 'Controleur_inscription.php';
-
-?>
 <!doctype html>
 <html lang="fr">
 <head>
@@ -27,27 +12,25 @@ require_once 'Controleur_inscription.php';
     Nom
     <input id="nom" name="nom" type="text"><br>
     <div id="error_nom">
-
     </div>
     Prenom
     <input id="prenom" name="prenom" type="text"><br>
     <div id="error_prenom">
-
     </div>
     Email
     <input id="email" name="email" type="email"><br>
     <div id="error_email">
-
     </div>
     Password
     <input id="password" name="password" type="password"><br>
     Verif Password
     <input id="password_hash" type="password" name="password_hash"><br>
     <div id="error_password">
-
     </div>
-    <button type="button" id="recuperation">envoyer</button><br>
+    <button type="button" name="inscription" value="1" id="recuperation">envoyer</button><br>
     <div id="error_empty">
+    </div>
+    <div id="result">
 
     </div>
 </form>
@@ -55,6 +38,3 @@ require_once 'Controleur_inscription.php';
 <script src="script.js"></script>
 </body>
 </html>
-<?php
-var_dump($_POST);
-

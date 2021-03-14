@@ -8,12 +8,23 @@
     <title>Connexion</title>
 </head>
 <body>
-<form method="post" action="">
-<input type="text"><br>
-<input type="text">
-</form>
+<form action="connexion.php" method="post" enctype="multipart/form-data">
+    Email
+    <input id="email" name="email" type="email"><br>
+    <div id="error_wrong_email">
+    </div>
+    Password
+    <input id="password" name="password" type="password"><br>
+    <div id="error_wrong_password">
+    </div>
+    <button type="button" name="Connexion" value="1" id="recuperation">Connexion</button><br>
+    <div id="error_empty">
+    </div>
+    <div id="result">
 
+    </div>
+</form>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="scriptConnexion"></script>
 </body>
 </html>
-<?php
-
