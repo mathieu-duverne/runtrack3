@@ -2,6 +2,7 @@ $('#recuperation').click( function (event){
     var email = $('#email').val();
     var password = $('#password').val();
     var connexion_submit = $('#recuperation').val();;
+    $("#error_empty").empty();
     var error = [];
     if(email == "" || password == "")
     {
@@ -21,9 +22,12 @@ $('#recuperation').click( function (event){
             dataType: 'text',
         })
             .done(function(data){
-                $('#result').html(data);
+                $('#resulte').html(data);
                 if(data.indexOf('success') >=0){
-                    window.location = 'index.php';
+                    window.setTimeout( function(){
+                        window.location = "index.php";
+                        { alert("Connexion réussie !") }
+                    }, 100 );
                 }
             });
     }

@@ -19,7 +19,7 @@ if(isset($_POST['connexion']))
     {
         exit();
     }
-    $stmt = $conn->prepare("SELECT email , password FROM utilisateurs WHERE email = :email ;");
+    $stmt = $conn->prepare("SELECT nom, prenom, email , password FROM utilisateurs WHERE email = :email ;");
     $stmt->execute(['email' => $_POST['email']]);
     if($stmt->rowCount() == 0){
         echo"<p style='color:red;'>Email non valide !</p>";
@@ -28,9 +28,15 @@ if(isset($_POST['connexion']))
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
         if($user['password']==$_POST['password'])
         {
+            $_SESSION['nom'] = $user['nom'];
+            $_SESSION['prenom'] = $user['prenom'];
             $_SESSION['password'] = $user['password'];
             $_SESSION['email'] = $_POST['email'];
-            exit('<p style:color:green>Login success</p>');
+            exit('<p style="display: none;">success</p>');
+        }
+        if($user['password']!=$_POST['password'])
+        {
+            echo"<p style='color:red;'>Password not working !</p>";
         }
     }
 }

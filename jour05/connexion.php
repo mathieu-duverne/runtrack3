@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <html lang="fr">
 <head>
@@ -20,11 +23,11 @@
     <button type="button" name="Connexion" value="1" id="recuperation">Connexion</button><br>
     <div id="error_empty">
     </div>
-    <div id="result">
+    <div id="resulte">
 
     </div>
 </form>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="scriptConnexion"></script>
+<script src="scriptConnexion.js"></script>
 </body>
 </html>

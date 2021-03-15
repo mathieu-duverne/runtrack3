@@ -20,7 +20,7 @@ if(isset($_POST['inscription'])){
     {
         exit();
     }
-    elseif(isset($_POST['nom']) || isset($_POST['prenom']))
+    else if(isset($_POST['nom']) || isset($_POST['prenom']))
     {
                $sql = "INSERT INTO utilisateurs SET nom = :nom, prenom = :prenom, email = :email, password = :password";
                $stmt = $conn->prepare($sql);
@@ -30,9 +30,8 @@ if(isset($_POST['inscription'])){
                    "email" => $_POST['email'],
                    "password" => $_POST['password']
                ]);
-               exit('<p style:color:green>Register success</p>');
-           }    
-
+               exit('<p style="display:none";>success</p>');
+    }
 }
 
            
