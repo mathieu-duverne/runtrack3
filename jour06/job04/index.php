@@ -22,11 +22,21 @@
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
+    let i = 0;
     $('#header').click(function(event){
+        i++;
+        if(i%2==0)
+        {
+            document.body.style.backgroundColor = "white";
+            $('#remplie').empty();
+        }
+        else
+        {
         document.body.style.backgroundColor = "grey";
         $("#remplie").append("<a id='e' href=''>Acueil</a>");
         $("#remplie").append("<a id='e' href=''>Présentation</a>");
         $("#remplie").append("<a id='e' href=''>Contact</a>");
+        }
     });
 </script>
 </body>
