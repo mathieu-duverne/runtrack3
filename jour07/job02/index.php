@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <title>Job02</title>
 </head>
-<body>
+<body >
 <nav class="navbar navbar-expand-sm navbar-light">
     <a class="navbar-brand" href="#">LPTF</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -134,8 +134,11 @@
                 <div class="d-flex flex-row-reverse">
                     <h6>Installation de AI 9000</h6>
                 </div>
+
                 <div class="progress">
+                    <div><button id="plus" type="button">&#x21E4;</button></div>
                     <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div id="moins"><button>&#x21E5;</button></div>
                 </div>
             </div>
         </div>
@@ -205,6 +208,19 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 <script>
+let p = $(".progress-bar").attr("aria-valuenow");
+    $("#plus").click(function(event){
+        if(p < 100) {
+            p = p - 10;
+            $(".progress-bar").css("width", p + "%").text(p + " %");
+        }
+    })
+$("#moins").click(function(event){
+    if(p < 100) {
+        p = p + 10;
+        $(".progress-bar").css("width", p + "%").text(p + " %");
+    }
+})
 $("#reboot").click(function(event){
         $("#remplace").empty();
     $("#remplace").append("T’endors pas c’est l’heure de mourir.");

@@ -9,31 +9,31 @@
 <body style=" display:flex;  justify-content: center;">
 <section id="dedan" >
 <section id="shuffle" style="border: solid 2px; place-items:center; height:650px; width:650px; display:grid; grid-template-columns:repeat(3,auto); justify-content:center; grid-gap:5px;">
-<div id="1">
+<div id="div1">
 <img id="1" width="200" src="images/1.png" alt="">
 </div>
-<div id="2">
+<div id="div2">
 <img id="2" width="200" src="images/2.png" alt="">
 </div>
-<div id="3">
+<div id="div3">
 <img id="3" width="200" src="images/3.png" alt="">
 </div>
-<div id="4">
+<div id="div4">
 <img id="4" width="200" src="images/4.png" alt="">
 </div>
-<div id="5">
+<div id="div5">
 <img id="5" width="200" src="images/5.png" alt="">
 </div>
-<div id="6">
+<div id="div6">
 <img id="6" width="200" src="images/6.png" alt="">
 </div>
-<div id="7">
+<div id="div7">
 <img id="7" width="200" src="images/7.png" alt="">
 </div>
-<div id="8">
+<div id="div8">
 <img id="8" width="200" src="images/8.png" alt="">
 </div>
-<div id="9">
+<div id="div9">
 <img id="9" width="200" src="" alt="">
 </div>
 </section>
